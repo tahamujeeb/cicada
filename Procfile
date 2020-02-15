@@ -1,0 +1,1 @@
+web: gunicorn dprojx.wgsi --log-file
