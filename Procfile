@@ -1,1 +1,1 @@
-web: gunicorn dprojx.wgsi --log-file -
+web: gunicorn dappx.wgsi --log-file -
