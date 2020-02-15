@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cicada | About</title>
+	{% load static %}
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='icon' href='{% static "dappx/favicon.ico" %}' type='image/x-icon' />
+
+	<!-- stylesheet css -->
+	<link rel="stylesheet" href='{% static "dappx/css/bootstrap.fe.css" %}'>
+	<link rel="stylesheet" href='{% static "dappx/css/font-awesome.min.css" %}'>
+	<link rel="stylesheet" href='{% static "dappx/css/nivo-lightbox.css" %}'>
+	<link rel="stylesheet" href='{% static "dappx/css/nivo_themes/default/default.css" %}'>
+	<link rel="stylesheet" href='{% static "dappx/css/style-main.css" %}'>
+	<!-- google web font css -->
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<script src='{% static "dappx/js/jquerylatestmin.js" %}'></script>
+	<script type="text/javascript" src='{% static "dappx/js/jquery.simple-text-rotator.min.js" %}'></script>
+	<link rel="stylesheet" type="text/css" href="css/simpletextrotator.css" />
+</head>
+
+<body>
+
+	<!-- navigation -->
+
+	<div class="container">
+		<div class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon icon-bar"></span>
+					<span class="icon icon-bar"></span>
+					<span class="icon icon-bar"></span>
+				</button>
+				<a href="{% url 'index' %}" class="navbar-brand"><img src='{% static "dappx/images/logo.png" %}'
+						class="img-responsive" alt="logo"></a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="{% url 'index' %}"><b>HOME</b></a></li>
+					<li><a href="{% url 'about' %}" class="active"><b>ABOUT</b></a></li>
+					<li><a href="{% url 'contact' %}"><b>CONTACT</b></a></li>
+					<li><a href="{% url 'dappx:user_login' %}"><b>LOGIN</b></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- about header section -->
+	<div id="about-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-1 col-sm-5"></div>
+				<div class="col-sm-4 col-md-10">
+					<h1 class="text-center text-uppercase">ABOUT CICADA<br>
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- team section -->
+	<div id="team">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8 col-sm-12">
+					<h3>
+						<center>Here's some information about me and this project.
+					</h3>
+					<p>This project took over 6 months to complete. I spent countless hours on building it exactly the
+						way I had envisioned it. A lot of blood, sweat and tears were invested into this.</p>
+				</div>
+			</div>
+
+			<div class="row mt30" style="border: 2px solid; padding: 20px;">
+				<div class="col-md-4 col-sm-6 col-xs-6">
+					<div class="team-wrapper">
+						<img src='{% static "dappx/images/team1.jpg" %}' class="img-responsive" alt="team img"
+							style="margin-left: auto; margin-right: auto;" align="left">
+					</div>
+				</div>
+				<div class="col-md-8 col-sm-6 col-xs-6">
+					<h3 style="text-align: left;">TAHA MUJEEB</h3>
+
+					<div class="test" align="left">
+						<h4 class="rotate">Developer, Front-End Manager, Designer, Back-End Manager, DB Admin,
+							Programmer</h4>
+					</div>
+
+					<!-- <h4 style="text-align: center;">Developer &AMP Designer</h4> -->
+					<p style="text-align: left;">Cicada is the final year project for my undergrad degree. I worked
+						tirelessly for over 6 months in order to build this program. In a nutshell, Cicada allows the HR
+						personnel to create admin accounts and employee records with basic informational particulars.
+						The admin can then assign a tag to each employee based on their experience and performance. It
+						also allows the admin to mark an employee of their status, whether they are active or dismissed
+						whilst allowing multiple filters to be applied based on the employee records.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-30" style="margin-right: 0px;">
+			<div class="col-md-12 col-sm-12">
+				<hr>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<h3 style="padding-left: 200px;">Technologies</h3>
+				<p style="padding-left: 200px;">This project was brought to life by using HTML5, CSS3, and JS for the
+					entirety of the front-end development. I mostly used Visual Studio Code for typing and editing most
+					of the code.</p>
+				<p style="padding-left: 200px;">The back-end development was coded in Python and built on the Django
+					framework for Python. And finally, my choice of database management is MySQL.</p>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<figure>
+					<div class="graphic" style="vertical-align: middle;">
+						<div class="row" style="vertical-align: middle; width: 88%;">
+							<!-- languages bar -->
+							<div class="chart" style="vertical-align: middle; border-radius: 20px">
+								<span class="block" title="HTML5 & BOOTSTRAP 4.0">
+									<span class="value">20%</span>
+									<h5 style="text-align: center;">HTML</h5>
+								</span>
+								<span class="block" title="CSS3">
+									<span class="value">30%</span>
+									<h5 style="text-align: center;">CSS</h5>
+								</span>
+								<span class="block" title="PYTHON 8.0 & DJANGO 3.0.2">
+									<span class="value">20%</span>
+									<h5 style="text-align: center;">PYTHON</h5>
+								</span>								
+								<span class="block" title="JS & JQUERY">
+									<span class="value">15%</span>
+									<h5 style="text-align: center;">JS</h5>
+								</span>
+								<span class="block" title="MYSQL 8.0">
+									<span class="value">15%</span>
+									<h5 style="text-align: center;">MYSQL</h5>
+								</span>								
+							</div>
+							<!-- <p>HTML 5 & CSS3 &nbsp PYTHON &nbsp MYSQL</p> -->
+						</div>
+					</div>
+				</figure>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<!-- footer section -->
+	<footer>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-5 col-sm-4">
+					<img src='{% static "dappx/images/logo.png" %}' class="img-responsive" alt="logo">
+					<p>Cicada is designed, developed and maintained by Taha Mujeeb. Feel free to contact me for any
+						queries and suggestions. </p>
+					<p><em class="fa fa-phone"></em> <a href="tel:+918790606685">+91 87906 06685</a></p>
+					<p><em class="fa fa-envelope-o"></em><a href="mailto:taahamujeeb@gmail.com"
+							target="_blank">taahamujeeb@gmail.com</a></p>
+					</p>
+					<p><i class="fa fa-globe"></i> <a href="https://www.tahamujeeb.com/"
+							target="_blank">www.tahamujeeb.com</a></p>
+				</div>
+
+				<div class="col-md-3 col-sm-4">
+					<h3>Useful Links</h3>
+					<p><a href="https://www.tahamujeeb.com/" target="_blank">About me</a></p>
+					<p><a href="https://drive.google.com/file/d/1D_MkNQuBjhHwfYM3b8ZuQ87RnQjEVXIm/view"
+							target="_blank">My resume</a></p>
+				</div>
+
+				<div class="col-md-4 col-sm-4 newsletter">
+					<h3>Newsletter</h3>
+					<p>Subscribe to stay connected! I won't annoy you with any frequent emails, I promise.</p>
+					<div class="input-group">
+						<form action="#" method="post">
+							<input name="email" type="email" placeholder="Enter your email" class="form-control"
+								autorequired>
+							<button type="submit" name="submit" class="btn email">Submit</button>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- copyright section -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<p>Copyright © 2020 Taha Mujeeb</p>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<ul class="social-icons">
+						<li><a href="https://www.facebook.com/taahamujeeb" target="_blank" class="fa fa-facebook"></a>
+						</li>
+						<li><a href="https://www.instagram.com/tahamujeeb/" target="_blank" class="fa fa-instagram"></a>
+						</li>
+						<li><a href="https://wa.me/918790606685" target="_blank" class="fa fa-whatsapp"></a></li>
+						<li><a href="https://www.linkedin.com/in/tahamujeeb/" target="_blank"
+								class="fa fa-linkedin"></a></li>
+						<li><a href="https://twitter.com/taahamujeeb" target="_blank" class="fa fa-twitter"></a></li>
+						<li><a href="https://www.tahamujeeb.com/" target="_blank" class="fa fa-globe"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- javascript js -->
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<script>
+		$('.value').each(function () {
+			var text = $(this).text();
+			$(this).parent().css('width', text);
+		});
+
+		$('.block').tooltip();
+	</script>
+
+	<script>
+		$(document).ready(function () {
+			$(".rotate").textrotator({
+				animation: "dissolve", // dissolve, fade, flip, flipUp, flipCube, flipCubeUp and spin.
+				separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
+				speed: 1000, // How many milliseconds until the next word show.
+			});
+		});
+	</script>
+
+</body>
+
+</html>

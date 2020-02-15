@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  {% load crispy_forms_tags %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Cicada | New Account</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />  
+  <link rel="stylesheet" href='{% static "dappx/css/fontawesome.min.css" %}'>  
+  <!-- <link rel="stylesheet" href='{% static "dappx/jquery-ui-datepicker/jquery-ui.min.css' type="text/css" /> -->
+  <link rel="stylesheet" href='{% static "dappx/css/bootstrap.min.css" %}'>
+  <link rel="stylesheet" href='{% static "dappx/css/style.css" %}'>
+  <link rel='icon' href='{% static "dappx/favicon.ico" %}' type='image/x-icon' />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-xl">
+    <div class="container h-100">
+      <a class="navbar-brand" href="{% url 'dashboard' %}">
+        <a href="{% url 'index' %}" class="navbar-brand"> <img src='{% static "dappx/images/logo.png" %}'>
+        </a>
+        <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars tm-nav-icon"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto h-100">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'dashboard' %}">
+                <i class="fas fa-tachometer-alt"></i> DASHBOARD              
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'records' %}">
+                <i class="fas fa-folder-open"></i>
+                <!-- <span class="sr-only">(current)</span> -->
+                RECORDS
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fas fa-user"></i>
+                <span> ACCOUNTS <i class="fas fa-angle-down"></i> </span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">              
+                <a class="dropdown-item" href="{% url 'add-account' %}">ADD NEW</a>
+                <a class="dropdown-item" href="http://127.0.0.1:8000/admin/dappx/newaccount/">EDIT EXISTING</a>
+              </div>          
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}">
+                <i class="fas fa-home"></i>
+                HOME
+              </a>
+              </li>            
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout' %}">
+                <i class="fas fa-sign-out-alt"></i>
+                LOGOUT
+              </a>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+  <div class="container tm-mt-big tm-mb-big">
+    <div class="row">
+      <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+        <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="tm-block-title d-inline-block">New Account</h2>
+            </div>
+          </div>
+          <div class="row tm-edit-product-row">
+            <div class="col-xl-6 col-lg-6 col-md-5">
+              <form method="POST" class="NewAccount">
+                {% csrf_token %}                
+                <div class="form-group mb-12">
+                  {{ RecordsForm.Username|as_crispy_field }}
+                </div>
+                <div class="form-group mb-3">
+                  {{ RecordsForm.Last_Name|as_crispy_field }}
+                </div>
+                <div class="form-group mb-3">
+                  {{ RecordsForm.Status|as_crispy_field }}
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12">
+              <div class="form-group mb-3">
+                {{ RecordsForm.First_Name|as_crispy_field }}
+              </div>
+              <div class="form-group mb-3">
+                {{ RecordsForm.Category|as_crispy_field }}
+              </div>              
+              <div class="row">
+                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                  {{ RecordsForm.Experience|as_crispy_field }}
+                </div>
+                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                  {{ RecordsForm.Performance|as_crispy_field }}
+                </div>
+              </div>
+            </div> 
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Account</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="tm-footer row tm-mt-small">
+    <div class="col-12 font-weight-light">
+      <p class="text-center text-white mb-0 px-4 small">
+        Copyright &copy; <b>2020</b> <a rel="nofollow noopener" href="https://www.tahamujeeb.com" target="_blank"
+          class="tm-footer-link">Taha Mujeeb</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- https://jquery.com/download/ -->
+  <script src='{% static "dappx/js/jquery-3.3.1.min.js"%}'></script>
+  <!-- https://getbootstrap.com/ -->
+  <script src='{% static "dappx/js/bootstrap.min.js"%}'></script>
+  <!-- https://jqueryui.com/download/ -->
+  <script src='{% static "dappx/jquery-ui-datepicker/jquery-ui.min.js"%}'></script>
+  <script>
+    $(function () {
+      $("#expire_date").datepicker();
+    });
+  </script>
+</body>
+
+</html>
