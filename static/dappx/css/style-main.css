@@ -132,7 +132,7 @@ img {
 }
 #home h1,
 #home h3 {
-  line-height: 30px;
+  line-height: 40px;
   font-size: 40px;
 }
 
@@ -408,6 +408,10 @@ footer a:hover {
   footer h3 {
     padding-top: 30px;
   }
+  .social-icons {
+    padding-left: 100px;
+    margin: 0px;
+  }
 }
 
 /* about affect css */
@@ -529,5 +533,5 @@ figure {
 	}
 	.legend {
 		width: 50%;
-	}
+  }  
 }
