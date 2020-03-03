@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from dappx.forms import UserForm, RecordsForm
-# from .models import AddAccount
-# UserProfileInfoForm
+from django.template.context_processors import csrf
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -105,9 +104,6 @@ def custom_login(request):
         return render(request,'dappx/dashboard.html')
     else:
         return login(request)
-
-# def permission_denied(request):
-#         return render(request, 'dappx/403.html', context)
 
 def table(request):
     newaccount_Data=NewAccount.objects.all()
