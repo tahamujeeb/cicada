@@ -85,6 +85,17 @@ system. All disputes are subject to Hyderabad, India jurisdiction only. -->
           <div class="row">
             <div class="col-12">
               <h2 class="tm-block-title d-inline-block">New Account</h2>
+            <div class="form-group">
+              {% if messages %}
+              <ul class="messages">
+                {% for message in messages %}                
+                <div class="alert alert-success alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                  {{ message }} </div>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </div>
             </div>
           </div>
           <div class="row tm-edit-product-row">

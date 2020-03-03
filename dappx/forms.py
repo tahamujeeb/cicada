@@ -18,7 +18,16 @@ class RecordsForm(forms.ModelForm):
     class Meta:
         model = NewAccount
         fields = "__all__"
-        
+
+    def clean_Username(self): # Validates the Username Field
+        Username = self.cleaned_data.get('Username')
+        if (Username == ""):
+            raise forms.ValidationError('This field cannot be left blank.')
+        for instance in NewAccount.objects.all():
+            if instance.Username == Username:
+                raise forms.ValidationError('Username already exists. Please try again.')
+        return Username
+
     # class UserProfileInfoForm(forms.ModelForm):
     #     class Meta():
     #         model = UserProfileInfoForm

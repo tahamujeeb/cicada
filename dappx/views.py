@@ -48,6 +48,7 @@ def addaccount(request):
             user = R_Form.save(commit='True')
             # Hash the password
             R_Form = RecordsForm()
+            messages.success(request,'Employee record added successfully.')
         else:
             print("The details you entered are invalid. Please try again.")
     return render(request, 'dappx/add-account.html', {'RecordsForm': R_Form})
@@ -104,6 +105,9 @@ def custom_login(request):
         return render(request,'dappx/dashboard.html')
     else:
         return login(request)
+
+# def permission_denied(request):
+#         return render(request, 'dappx/403.html', context)
 
 def table(request):
     newaccount_Data=NewAccount.objects.all()

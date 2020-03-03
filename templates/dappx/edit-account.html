@@ -91,23 +91,27 @@ system. All disputes are subject to Hyderabad, India jurisdiction only. -->
             <div class="col-12">
               <h2 class="tm-block-title d-inline-block">Edit Account</h2>
             </div>
+            <div class="alert alert-danger" role="alert">
+              You do not have permission to access this page. Please contact system administrator.
+            </div>
           </div>
           <div class="row tm-edit-product-row">
-            <div class="col-xl-6 col-lg-6 col-md-12">
+            <div class="col-xl-6 col-lg-6 col-md-12" >
               <form action="" method="post" class="tm-edit-product-form">
+                {% csrf_token %}
                 <div class="form-group mb-12">
                   <label for="name">Username</label> 
                   <input id="form.Username" name="id_Username" type="text" placeholder="Enter username" class="form-control validate"
-                    required />                  
+                    disabled />                  
                 </div>
                 <div class="form-group mb-3">
                   <label for="name">Last Name
                   </label>
-                  <input id="name" name="name" type="text" placeholder="Enter Last Name" class="form-control validate" required />
+                  <input id="name" name="name" type="text" placeholder="Enter Last Name" class="form-control validate" disabled />
                 </div>
                 <div class="form-group mb-3">
                   <label for="category">Status</label>
-                  <select class="custom-select tm-select-accounts" id="category">
+                  <select class="custom-select tm-select-accounts" id="category" disabled>
                     <option selected>Select status</option>
                     <option value="1">Active</option>
                     <option value="2">Inactive</option>                    
@@ -118,11 +122,11 @@ system. All disputes are subject to Hyderabad, India jurisdiction only. -->
               <div class="form-group mb-3">
                 <label for="name">First Name
                 </label>
-                <input id="name" name="name" type="text" placeholder="Enter First Name" class="form-control validate" />
+                <input id="name" name="name" type="text" placeholder="Enter First Name" class="form-control validate" disabled />
               </div>
               <div class="form-group mb-3">
                 <label for="category">Category</label>
-                <select class="custom-select tm-select-accounts" id="category">
+                <select class="custom-select tm-select-accounts" id="category" disabled>
                   <option selected>Select category</option>
                   <option value="1">Admin</option>
                   <option value="2">Manager</option>
@@ -132,10 +136,10 @@ system. All disputes are subject to Hyderabad, India jurisdiction only. -->
               </div>
               
               <div class="row">
-                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                <div class="form-group mb-3 col-xs-12 col-sm-6" >
                   <label for="expire_date">Experience
                   </label>
-                  <select class="custom-select tm-select-accounts" id="category">
+                  <select class="custom-select tm-select-accounts" id="category" disabled>
                     <option selected>Select</option>
                     <option value="1">Fresher</option>
                     <option value="2">Junior</option>
@@ -145,7 +149,7 @@ system. All disputes are subject to Hyderabad, India jurisdiction only. -->
                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                   <label for="stock">Performance
                   </label>
-                  <select class="custom-select tm-select-accounts" id="category">
+                  <select class="custom-select tm-select-accounts" id="category" disabled>
                     <option selected>Select</option>
                     <option value="1">Bad</option>
                     <option value="2">Average</option>
@@ -156,7 +160,7 @@ system. All disputes are subject to Hyderabad, India jurisdiction only. -->
               </div>
             </div>
             <div class="col-12">
-              <button type="submit" class="btn btn-primary btn-block text-uppercase">Update Account</button>
+              <button type="submit" class="btn btn-primary btn-block text-uppercase" disabled>Update Account</button>
             </div>
             </form>
           </div>

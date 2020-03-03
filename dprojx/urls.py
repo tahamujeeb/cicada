@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from dappx import views
-from django.conf.urls import url,include
+from django.conf.urls import url,include,handler403
+
+# handler403 = 'dappx.views.permission_denied'
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
